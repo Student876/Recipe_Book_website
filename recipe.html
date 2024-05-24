@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="recipe.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <logo>
+            <img
+                src="https://yt3.googleusercontent.com/ytc/AIdro_kJMSQCkqLdxf4-nqfn9KahE5bkE0AZ3ngkz8qCG6TWD08=s900-c-k-c0x00ffffff-no-rj">
+        </logo>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--home-->
+    <section class="hero" id="home">
+        <h1>Welcome to the Recipe Book</h1>
+        <p>Explore delicious recipes for every occasion</p>
+        <a href="#recipes" class="cta-button">Get Started</a>
+    </section>
+
+    <!--About-->
+    <div class="container">
+        <div id="about">
+            <h1>About</h1>
+            <div class="row">
+                <div class="column-1">
+                    <img src="recipe book.jpeg">
+                </div>
+                <div class="column-2">
+                    <div class="text-area">
+                        <p>Welcome to my recipe book website! I am passionate about cooking and sharing delicious
+                            recipes with you. My goal is to provide a variety of recipes to suit every taste and
+                            occasion. Whether you're a beginner or an experienced chef, I hope you find inspiration and
+                            joy in my collection of recipes. Feel free to explore, cook, and enjoy!</p>
+                        <p>If you have any questions, suggestions, or feedback, please don't hesitate to contact me. I'd
+                            love to hear from you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Recipes-->
+    <div id="recipes">
+        <h1>Recipe Recommender</h1>
+        <div class="display">
+            <div class="recipe">
+                <label for="ingredient">Favorite Ingredient:</label>
+                <input type="text" id="ingredient" placeholder="Enter your favorite ingredient">
+                <button onclick="fetchRecipes()">Find Recipes</button>
+            </div>
+            <div class="recipes-container" id="recipes-container"></div>
+        </div>
+
+        <h1>Manage Your Recipes</h1>
+        <div class="manage-recipes">
+            <form id="recipe-form">
+                <input type="hidden" id="recipe-id">
+                <label for="recipe-title">Title:</label>
+                <input type="text" id="recipe-title" required>
+                <label for="recipe-ingredients">Ingredients:</label>
+                <textarea id="recipe-ingredients" rows="3" required></textarea>
+                <label for="recipe-instructions">Instructions:</label>
+                <textarea id="recipe-instructions" rows="3" required></textarea>
+                <button type="submit">Save Recipe</button>
+            </form>
+            <div class="recipes-list" id="recipes-list"></div>
+        </div>
+    </div>
+
+    <!--contact-->
+    <div class="container">
+        <div id="contact">
+            <h1>Contact Me</h1>
+            <p>Have a question, suggestion, or feedback? I'd love to hear from you! Please fill out the form below and
+                I'll get back to you as soon as possible.</p>
+            <form class="contact-form" id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Recipe Book</p>
+        <p>All rights reserved.</p>
+    </footer>
+
+    <div onclick="scrollToTop()" class="scrollbutn">Top</div>
+    <script src="recipe.js"></script>
+
+
+
+</body>
+
+</html>
